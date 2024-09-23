@@ -1,5 +1,5 @@
 create database cw01;
-use cw01
+use cw01;
 CREATE TABLE `ksiazki` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `tytul` varchar(60),
