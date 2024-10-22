@@ -9,9 +9,8 @@ currently being supported with security updates.
 | Version | Supported          |
 | ------- | ------------------ |
 | cw02    | :white_check_mark: |
-| 5.0.x   | :x:                |
 | cw03    | :white_check_mark: |
-| < 4.0   | :x:                |
+| x       | :x:                |
 
 ## Reporting a Vulnerability
 
