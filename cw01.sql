@@ -83,6 +83,7 @@ CREATE TABLE `id_klient` (
 --
 -- Zrzut danych tabeli `id_klient`
 --
+--
 
 INSERT INTO `id_klient` (`id_klient`, `Imie i nazwisko`, `NIP`) VALUES
 (10, 'HDK Kujawy', '927-132-87-90'),
