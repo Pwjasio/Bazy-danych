@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 16 Paź 2024, 13:10
+-- Czas generowania: 22 Paź 2024, 08:42
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 8.1.2
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `cw01`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `calosc`
+--
+
+CREATE TABLE `calosc` (
+  `Zestaw` int(11) NOT NULL,
+  `Sklad_zestawu` varchar(20) NOT NULL,
+  `Przygotowal` int(11) NOT NULL,
+  `id_asortymentu` varchar(20) NOT NULL,
+  `Stawka VAT` decimal(2,0) NOT NULL,
+  `Skladniki` varchar(20) NOT NULL,
+  `ilosc krazkow` int(11) NOT NULL,
+  `zamowienie` varchar(20) NOT NULL,
+  `Cena jednostkowa za rolke` varchar(20) NOT NULL,
+  `id_klienta` int(11) NOT NULL,
+  `NIP` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -57,7 +77,7 @@ INSERT INTO `id_asortymentu` (`Id_sklad`, `sushi`, `Stawka podatku VAT`, `Cena z
 CREATE TABLE `id_klient` (
   `id_klient` int(11) NOT NULL,
   `Imie i nazwisko` varchar(20) NOT NULL,
-  `NIP` varchar(50) NOT NULL
+  `NIP` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -66,7 +86,7 @@ CREATE TABLE `id_klient` (
 
 INSERT INTO `id_klient` (`id_klient`, `Imie i nazwisko`, `NIP`) VALUES
 (10, 'HDK Kujawy', '927-132-87-90'),
-(11, 'Jan Nowak', '-');
+(11, 'Jan Nowak', '0');
 
 -- --------------------------------------------------------
 
@@ -121,6 +141,14 @@ INSERT INTO `zestaw` (`id_zestaw`, `Nazwa zestawu`) VALUES
 --
 -- Indeksy dla zrzutów tabel
 --
+
+--
+-- Indeksy dla tabeli `calosc`
+--
+ALTER TABLE `calosc`
+  ADD PRIMARY KEY (`Zestaw`),
+  ADD KEY `id_klienta` (`id_klienta`),
+  ADD KEY `Przygotowal` (`Przygotowal`);
 
 --
 -- Indeksy dla tabeli `id_asortymentu`
@@ -190,6 +218,14 @@ ALTER TABLE `zestaw`
 --
 -- Ograniczenia dla zrzutów tabel
 --
+
+--
+-- Ograniczenia dla tabeli `calosc`
+--
+ALTER TABLE `calosc`
+  ADD CONSTRAINT `calosc_ibfk_1` FOREIGN KEY (`id_klienta`) REFERENCES `id_klient` (`id_klient`),
+  ADD CONSTRAINT `calosc_ibfk_2` FOREIGN KEY (`Zestaw`) REFERENCES `zestaw` (`id_zestaw`),
+  ADD CONSTRAINT `calosc_ibfk_3` FOREIGN KEY (`Przygotowal`) REFERENCES `przygotowal` (`id_k`);
 
 --
 -- Ograniczenia dla tabeli `sklad zestawu`
