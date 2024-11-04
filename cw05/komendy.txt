@@ -1,0 +1,27 @@
+1.
+a) SELECT * FROM City
+    -> WHERE CountryCode="ESP";
+b)  SELECT * FROM City
+    -> ORDER BY Population DESC LIMIT 5;
+c) SELECT * FROM Country
+    -> WHERE IndepYear>1989;
+d) SELECT * FROM Country
+    -> ORDER BY SurfaceArea DESC LIMIT 5;
+2.
+SELECT AVG(LifeExpectancy) FROM Country
+    -> WHERE Continent="Europe";
+SELECT AVG(LifeExpectancy) FROM Country
+    -> WHERE Continent="Africa";
+3.
+SELECT * FROM CountryLanguage
+    -> WHERE Percentage> "95";
+4.
+ SELECT Max(SurfaceArea), Min(SurfaceArea) FROM Country;
+5.
+ SELECT Sum(SurfaceArea) FROM Country WHERE Continent="EUROPE";
+6.
+ SELECT STDDEV_POP(LifeExpectancy) FROM Country WHERE Continent="EUROPE";
+7.
+ SELECT District, SUM(POPULATION) FROM City WHERE CountryCode="POL" group By District;
+8.
+  SELECT Continent, Count(Name) FROM Country group BY Continent;
