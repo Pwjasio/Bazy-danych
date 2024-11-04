@@ -1,0 +1,53 @@
+create database cw01;
+use cw01;
+CREATE TABLE `ksiazki` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `tytul` varchar(60),
+  `autor` int(11),
+  `kategorie` int(11)
+);
+CREATE TABLE `autorzy` (
+  `aid` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `imie` varchar(20),
+  `nazwisko` varchar(30)
+);
+CREATE TABLE `kategorie` (
+  `kid` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `nazwa` varchar(20)
+);
+INSERT INTO autorzy
+  (imie,nazwisko)
+  values ('Marek','Nowakowski');
+INSERT INTO autorzy
+  (imie,nazwisko)
+  values ('Leon','Atkinson');
+INSERT INTO autorzy
+  (imie,nazwisko)
+  values ('Karol','Wierzcholowski');
+INSERT INTO autorzy
+  (imie,nazwisko)
+  values ('Jan','Mrowczynski');
+INSERT INTO kategorie
+  (nazwa)
+  values ('PHP');
+INSERT INTO kategorie
+  (nazwa)
+  values ('MySQL');
+INSERT INTO kategorie
+  (nazwa)
+  values ('Bez kategorii');
+INSERT INTO ksiazki
+    (tytul,autor,kategorie)
+    values ('PHP Samouczek', 3, 1);
+INSERT INTO ksiazki
+    (tytul,autor,kategorie)
+    values ('MySQL Samouczek', 3, 2);
+INSERT INTO ksiazki
+    (tytul,autor,kategorie)
+    values ('PHP Praktyczne rozwiazania', 1, 1);
+INSERT INTO ksiazki
+    (tytul,autor,kategorie)
+    values ('MYSQL Przewodnik programisty', 2, 2);
+INSERT INTO ksiazki
+    (tytul,autor,kategorie)
+    values ('Klasa 4ta', 4, 3);

@@ -1,0 +1,26 @@
+Æwiczenie 1. Wykonaj poni¿sze kwerendy
+   Wypisz miasta hiszpañskie. ?
+   ZnajdŸ 5 najludniejszych miast œwiata. ?
+   Wypisz kraje, które uzyska³y niepodleg³oœæ po 1989 roku? ?
+   ZnajŸ 5 najwiêkszych obszarowo krajów Europy.
+
+
+Æwiczenie 2. Oblicz jaka jest œrednia d³ugoœæ ¿ycia w Europie, a jaka w Afryce? (2 zapytania).
+
+
+Æwiczenie 3. W ilu krajach jêzykiem oficjalnym mówi > 95% populacji?
+
+
+Æwiczenie 4. ZnajdŸ jaki jest najwiêkszy oraz najmniejszy obszar pañstwa w bazie.
+
+
+Æwiczenie 5. Policz jak¹ powierzchniê zajmuj¹ pañstwa Europy.
+
+
+Æwiczenie 6. Oblicz odchylenie standardowe œredniej d³ugoœci ¿ycia w Europie.
+
+
+Æwiczenie 7. Oblicz jaka jest suma mieszkañców miast polskich z podzia³em na województwa.
+
+
+Æwiczenie 8. Policz ile jest pañstw w poszczególnych kontynentach.
