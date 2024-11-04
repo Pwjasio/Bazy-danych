@@ -1,0 +1,22 @@
+1.
+CREATE DATABASE world;
+2.
+CREATE TABLE miasteczka (id int(3));
+DROP TABLE miasteczka;
+BAZA WORLD.
+source C:\world.sql
+3.
+SELECT * FROM City WHERE id<10;
+4.
+SELECT * FROM City WHERE CountryCode="POL";
+5.
+SELECT * FROM City WHERE id BETWEEN 1 AND 10 ORDER BY Name ASC;
+6.
+SELECT Name, Continent, LifeExpectancy From Country
+    -> WHERE LifeExpectancy>"80";
+7.
+SELECT * FROM Country
+    -> ORDER BY LifeExpectancy DESC LIMIT 10;
+8.
+SELECT * FROM City
+    -> WHERE CountryCode="POL" OR CountryCode="CZE" ORDER BY Name ASC;
