@@ -8,8 +8,13 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
+| cw01    | :white_check_mark: |
 | cw02    | :white_check_mark: |
 | cw03    | :white_check_mark: |
+| cw03    | :white_check_mark: |
+| cw05    | :white_check_mark: |
+| cw06    | :white_check_mark: |
+
 | x       | :x:                |
 
 ## Reporting a Vulnerability
