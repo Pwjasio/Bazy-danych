@@ -1,0 +1,16 @@
+1. 
+ INSERT INTO odpowiedzi (odpowiedz, konta_id, pytania_id) VALUES ('Przyda Ci się także wysoki stół, na którym postawisz pieska.', 5, 1);
+2.
+ SELECT nick, YEAR(CURDATE()) - YEAR(rejestracja) AS latNaForum FROM konta WHERE nick IN ('Jacek', 'Tomek', 'Monika');
+3.
+ SELECT k.nick, k.postow, p.pytanie FROM konta k JOIN pytania p ON k.id = p.konta_id WHERE p.id = 1;
+4. 
+ SELECT o.id AS id_odpowiedzi, o.odpowiedz AS odpowiedz, k.nick FROM odpowiedzi o JOIN konta k ON o.konta_id = k.id WHERE o.pytania_id = 1;
+5. 
+ ALTER TABLE konta ADD COLUMN data_urodzenia DATE;
+6.
+ UPDATE konta SET data_urodzenia=date(FROM_UNIXTIME((UNIX_TIMESTAMP('2000-01-01')-UNIX_TIMESTAMP('1980-01-01'))*RAND()+UNIX_TIMESTAMP('1980-01-01'))) WHERE id IN (select id FROM konta);
+7.
+ SELECT nick, TIMESTAMPDIFF(YEAR, data_urodzenia, CURDATE()) AS wiek FROM konta;
+8.
+SELECT nick FROM konta WHERE MONTH(data_urodzenia) = 1;
