@@ -1,0 +1,18 @@
+1. SELECT imie, nazwisko, miasto FROM klient WHERE miasto IN ('Legionowo', 'Warszawa');
+2. SELECT nazwa FROM produkty WHERE cena_brutto > 500;
+3. SELECT k.nazwa_kategorii AS nazwa_kategorii, AVG(p.cena_brutto) AS srednia_cena FROM kategorie k JOIN produkty p ON k.id_kat = p.id_kat GROUP BY k.nazwa_kategorii; 
+4. SELECT z.id_zam, z.ilosc, z.wartosc, p.nazwa AS nazwa_produktu FROM zamowienia z JOIN produkty p ON z.id_prod = p.id_prod WHERE z.id_klient = 2; 
+5. UPDATE klient SET login = LOWER(login);
+6. UPDATE klient SET haslo = MD5(haslo);
+7. CREATE TABLE ceny (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    cena_float FLOAT,
+    cena_double DOUBLE,
+    cena_decimal DECIMAL(10, 2)
+); 
+8. INSERT INTO ceny (cena_float, cena_double, cena_decimal) VALUES (29.99, 29.99, 29.99);
+9. SELECT 
+    cena_float * 1000000000 AS cena_float,
+    cena_double * 1000000000 AS cena_double,
+    cena_decimal * 1000000000 AS cena_decimal
+FROM ceny;
