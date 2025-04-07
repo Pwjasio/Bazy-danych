@@ -1,0 +1,16 @@
+1.
+ SELECT nazwa, ulica FROM `kwiaciarnie` WHERE miasto='Malbork';
+2.
+ SELECT zamowienia.id_kwiaciarni, COUNT(zamowienia.id_zam) FROM zamowienia JOIN kwiaciarnie ON kwiaciarnie.id_kwiaciarni=zamowienia.id_kwiaciarni GROUP BY kwiaciarnie.nazwa
+3.
+ SELECT kwiaciarnie.nazwa, kwiaciarnie.miasto, zamowienia.kwiaty FROM `kwiaciarnie` JOIN zamowienia ON zamowienia.id_kwiaciarni=kwiaciarnie.id_kwiaciarni WHERE zamowienia.data='2017-01-07'
+4.
+ CREATE TABLE klienci (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    imie VARCHAR(25),
+    nazwisko VARCHAR(25),
+    rabat INT);
+5.
+ CREATE USER 'uczen'@'%' IDENTIFIED BY 'Szkol@1!'
+6.
+ GRANT SELECT, UPDATE ON `cw25`.`zamowienia` TO 'uczen'@'%'
